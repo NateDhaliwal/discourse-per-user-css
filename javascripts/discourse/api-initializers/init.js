@@ -1,6 +1,6 @@
 import { apiInitializer } from "discourse/lib/api";
 
-export default apiInitializer((/* api */) => {
+export default apiInitializer((api) => {
   api.addSaveableUserOptionField({
     key: "user_css_edit",      // the custom user field name
     default: "",                // default value (empty string for code)
