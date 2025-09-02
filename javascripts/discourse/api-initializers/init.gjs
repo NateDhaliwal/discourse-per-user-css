@@ -10,4 +10,15 @@ export default apiInitializer((api) => {
     // Optionally add a custom "inputComponent" (for custom UI, see below)
     inputComponent: "form-kit/code"  // If you want a code editor
   });
+
+  api.renderInOutlet(
+    "user-preferences-interface",
+    <template>
+      <Form as |form|>
+        <form.Field @name="user_css_edit" @title="Custom CSS code" as |field|>
+          <field.Code @lang="css" @height={{200}} />
+        </form.Field>
+      </Form>
+    </template>
+  );
 });
