@@ -3,7 +3,7 @@ import Form from "discourse/components/form";
 
 export default apiInitializer((api) => {
   api.addSaveableUserOptionField({
-    key: "user_css_edit",      // the custom user field name
+    key: "user_css_code",      // the custom user field name
     default: "",                // default value (empty string for code)
     type: "string",             // type string for code or queries
     label: "Custom CSS code",        // label in the preferences UI
@@ -16,7 +16,7 @@ export default apiInitializer((api) => {
     "user-preferences-interface",
     <template>
       <Form as |form|>
-        <form.Field @name="user_css_edit" @title="Custom CSS code" as |field|>
+        <form.Field @name="user_css_code" @title="Custom CSS code" as |field|>
           <field.Code @lang="css" @height={{200}} />
         </form.Field>
       </Form>
