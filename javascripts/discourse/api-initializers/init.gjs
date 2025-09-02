@@ -1,4 +1,5 @@
 import { apiInitializer } from "discourse/lib/api";
+import Form from "discourse/components/form";
 
 export default apiInitializer((api) => {
   api.addSaveableUserOptionField({
